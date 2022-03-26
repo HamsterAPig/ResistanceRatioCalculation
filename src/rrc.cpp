@@ -48,7 +48,7 @@ void RRC::read_csv(QString path)
             QStringList strLine = Data.at(i).split(",");
             QVector<float> vec_temp;
             for(const auto&temp_str: strLine){
-                vec_temp.append(temp_str.toDouble());
+                vec_temp.append(temp_str.toFloat());
             }
             tmp_sec_vec.append(vec_temp);
         }
