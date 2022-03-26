@@ -14,14 +14,13 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets LinguistTools REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets LinguistTools REQUIRED)
 
-set(TS_FILES ResistanceRatioCalculation_zh_CN.ts)
+set(TS_FILES res/ResistanceRatioCalculation_zh_CN.ts)
+file(GLOB_RECURSE SOURCES "src/*.*")
 
 set(PROJECT_SOURCES
-        main.cpp
-        rrc.cpp
-        rrc.h
-        rrc.ui
+        res/rrc.ui
         ${TS_FILES}
+        ${SOURCES}
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
