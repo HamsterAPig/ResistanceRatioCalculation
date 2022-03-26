@@ -6,6 +6,16 @@ RRC::RRC(QWidget *parent)
     , ui(new Ui::RRC)
 {
     ui->setupUi(this);
+
+    QGraphicsScene *scene = new QGraphicsScene();
+    QGraphicsSvgItem *item = new QGraphicsSvgItem(":/dianzu_fenya.svg");
+    scene->addItem(item);
+    ui->graphicsView->setScene(scene);
+//    ui->graphicsView->fitInView(scene->sceneRect(),Qt::KeepAspectRatio);
+    ui->graphicsView->show();
+
+    qDebug()<<"ui->graphicsView->size():"<<ui->graphicsView->size();
+    qDebug()<<"scene->sceneRect().size(): " << scene->sceneRect().size();
     read_csv(":/1.csv");
     read_csv(":/2.csv");
     read_csv(":/3.csv");

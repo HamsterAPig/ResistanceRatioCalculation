@@ -14,6 +14,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_PREFIX_PATH "C:\\Qt\\6.2.3\\mingw_64\\lib\\cmake")
 find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets LinguistTools REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets LinguistTools REQUIRED)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Svg SvgWidgets)
 
 set(TS_FILES ${PROJECT_SOURCE_DIR}/res/ResistanceRatioCalculation_zh_CN.ts)
 file(GLOB_RECURSE SOURCES "src/*.*")
@@ -53,7 +54,7 @@ else()
     qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
 endif()
 
-target_link_libraries(ResistanceRatioCalculation PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(ResistanceRatioCalculation PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Svg Qt${QT_VERSION_MAJOR}::SvgWidgets)
 
 set_target_properties(ResistanceRatioCalculation PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com

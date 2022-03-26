@@ -7,6 +7,8 @@
 #include <QFileInfo>
 #include <QDebug>
 #include <QVector>
+#include <QtSvg>
+#include <QtSvgWidgets/QGraphicsSvgItem>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class RRC; }
