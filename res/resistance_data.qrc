@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>1.csv</file>
+        <file>2.csv</file>
+        <file>3.csv</file>
+        <file>4.csv</file>
+        <file>5.csv</file>
+        <file>6.csv</file>
+        <file>7.csv</file>
+    </qresource>
+</RCC>

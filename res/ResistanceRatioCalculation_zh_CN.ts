@@ -4,8 +4,9 @@
 <context>
     <name>RRC</name>
     <message>
-        <location filename="rrc.ui" line="14"/>
-        <source>RRC</source>
+        <location filename="../src/rrc.ui" line="14"/>
+        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="51"/>
+        <source>电阻阻值计算</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

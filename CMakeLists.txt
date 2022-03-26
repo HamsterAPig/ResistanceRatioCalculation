@@ -11,14 +11,17 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+set(CMAKE_PREFIX_PATH "C:\\Qt\\6.2.3\\mingw_64\\lib\\cmake")
 find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets LinguistTools REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets LinguistTools REQUIRED)
 
-set(TS_FILES res/ResistanceRatioCalculation_zh_CN.ts)
+set(TS_FILES ${PROJECT_SOURCE_DIR}/res/ResistanceRatioCalculation_zh_CN.ts)
 file(GLOB_RECURSE SOURCES "src/*.*")
+file(GLOB_RECURSE QRC_SOURCE_FILES ${CMAKE_CURRENT_SOURCE_DIR}/res/*.qrc)
 
 set(PROJECT_SOURCES
-        res/rrc.ui
+        ${PROJECT_SOURCE_DIR}/src/rrc.ui
+        ${QRC_SOURCE_FILES}
         ${TS_FILES}
         ${SOURCES}
 )

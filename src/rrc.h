@@ -2,6 +2,11 @@
 #define RRC_H
 
 #include <QMainWindow>
+#include <QDir>
+#include <QFile>
+#include <QFileInfo>
+#include <QDebug>
+#include <QVector>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class RRC; }
@@ -17,5 +22,8 @@ public:
 
 private:
     Ui::RRC *ui;
+
+    QVector < QVector < QVector< float > > > vec_resistances;
+    void read_csv(QString path);
 };
 #endif // RRC_H
