@@ -7,6 +7,7 @@ RRC::RRC(QWidget *parent)
 {
     ui->setupUi(this);
 
+    // 将svg图片显示出来
     QGraphicsScene *scene = new QGraphicsScene();
     QGraphicsSvgItem *item = new QGraphicsSvgItem(":/dianzu_fenya.svg");
     scene->addItem(item);
@@ -16,6 +17,7 @@ RRC::RRC(QWidget *parent)
 
     qDebug()<<"ui->graphicsView->size():"<<ui->graphicsView->size();
     qDebug()<<"scene->sceneRect().size(): " << scene->sceneRect().size();
+
     read_csv(":/1.csv");
     read_csv(":/2.csv");
     read_csv(":/3.csv");
@@ -33,6 +35,7 @@ RRC::~RRC()
 
 void RRC::read_csv(QString path)
 {
+    // 定义一个二维的QVector暂时缓存一整份csv文件
     QVector< QVector<float> > tmp_sec_vec;
     QFile file(path);
     bool bopen = file.open(QIODevice::ReadOnly | QIODevice::Text);
@@ -49,6 +52,7 @@ void RRC::read_csv(QString path)
             }
             tmp_sec_vec.append(vec_temp);
         }
+        // 将暂时缓存的一整份csv文件添加到全局总的三维vec_resistances中
         vec_resistances.append(tmp_sec_vec);
     }
 }

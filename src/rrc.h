@@ -26,6 +26,11 @@ private:
     Ui::RRC *ui;
 
     QVector < QVector < QVector< float > > > vec_resistances;
+
+    /**
+     * 读取csv文件里面的数据到QVector中方便后续查找
+     * @param path csv文件路径
+     */
     void read_csv(QString path);
 };
 #endif // RRC_H
