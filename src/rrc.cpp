@@ -1,5 +1,6 @@
 #include "rrc.h"
 #include "./ui_rrc.h"
+#include <QtMath>
 
 RRC::RRC(QWidget *parent)
     : QMainWindow(parent)
@@ -62,7 +63,32 @@ void RRC::on_calc_btn_clicked()
 {
     float vout = ui->vout_input->text().toFloat();
     float vref = ui->vref_input->text().toFloat();
+    int comb_index = ui->comboBox->currentIndex();
 
     float point_number = vref / vout;
-}
 
+    // 三分查找最接近的值
+    int left = 1;
+    int right = vec_resistances[comb_index].count();
+    while(left < right){
+        int midl = left + (right - left)/3;
+        int midr = right - (right - left)/3;
+
+        float err_l = point_number - vec_resistances[comb_index][midl][2];
+        float err_r = point_number - vec_resistances[comb_index][midr][2];
+        if(qFabs(err_l) > qFabs(err_r)){
+            left  = midl + 1;
+        } else {
+            right = midr - 1;
+        }
+        qDebug()<<"loop for left :"<<left;
+    }
+    float d1 = qFabs(vec_resistances[comb_index][left][2] - point_number);
+    float d2 = qFabs(vec_resistances[comb_index][right][2] - point_number);
+    if (d1 < d2){
+        qDebug()<<"Found data is:"<<vec_resistances[comb_index][left];
+    } else {
+        qDebug()<<"Found data is:"<<vec_resistances[comb_index][right];
+    }
+    qDebug()<<"Found near by:"<<vec_resistances[comb_index][left];
+}
