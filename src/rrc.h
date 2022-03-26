@@ -22,6 +22,9 @@ public:
     RRC(QWidget *parent = nullptr);
     ~RRC();
 
+private slots:
+    void on_calc_btn_clicked();
+
 private:
     Ui::RRC *ui;
 

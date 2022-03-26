@@ -57,3 +57,12 @@ void RRC::read_csv(QString path)
     }
 }
 
+
+void RRC::on_calc_btn_clicked()
+{
+    float vout = ui->vout_input->text().toFloat();
+    float vref = ui->vref_input->text().toFloat();
+
+    float point_number = vref / vout;
+}
+
