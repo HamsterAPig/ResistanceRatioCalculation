@@ -24,6 +24,7 @@ public:
 
 private slots:
     void on_calc_btn_clicked();
+    void press_f1_showHelp();
 
 private:
     Ui::RRC *ui;

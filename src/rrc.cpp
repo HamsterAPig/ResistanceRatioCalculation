@@ -1,8 +1,10 @@
 #include "rrc.h"
 #include "./ui_rrc.h"
+#include "./about.h"
 #include <QtMath>
 #include <QElapsedTimer>
 #include <QRegularExpression>
+#include <QShortcut>
 
 RRC::RRC(QWidget *parent)
     : QMainWindow(parent)
@@ -48,6 +50,8 @@ RRC::RRC(QWidget *parent)
     ui->calc_btn->setShortcut(QKeySequence::InsertParagraphSeparator);
     ui->calc_btn->setShortcut(Qt::Key_Enter);
     ui->calc_btn->setShortcut(Qt::Key_Return);
+
+    QShortcut* press_ps = new QShortcut(Qt::Key_F1, this, SLOT(press_f1_showHelp()));
 }
 
 RRC::~RRC()
@@ -142,4 +146,9 @@ void RRC::on_calc_btn_clicked()
     pragram_status->setText(tr("空闲"));
     float time = (double)mstimer.nsecsElapsed()/(double)1000000;
     ui->statusbar->showMessage(tr("查询用时: %1").arg(time));
+}
+
+void RRC::press_f1_showHelp() {
+    About* about_window = new About();
+    about_window->show();
 }
