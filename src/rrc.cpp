@@ -2,6 +2,7 @@
 #include "./ui_rrc.h"
 #include <QtMath>
 #include <QElapsedTimer>
+#include <QRegularExpression>
 
 RRC::RRC(QWidget *parent)
     : QMainWindow(parent)
@@ -37,6 +38,16 @@ RRC::RRC(QWidget *parent)
     ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     ui->tableView->setModel(model);
     ui->tableView->show();
+
+    // 通过正则表达式限制输入框只能输入正浮点数
+    QRegularExpression rx("^(([0-9]+\\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\\.[0-9]+)|([0-9]*[1-9][0-9]*))$");
+    ui->vref_input->setValidator(new QRegularExpressionValidator(rx, this));
+    ui->vout_input->setValidator(new QRegularExpressionValidator(rx, this));
+
+    // 绑定键盘快捷键，即两个回车按键绑定到计算按钮上面
+    ui->calc_btn->setShortcut(QKeySequence::InsertParagraphSeparator);
+    ui->calc_btn->setShortcut(Qt::Key_Enter);
+    ui->calc_btn->setShortcut(Qt::Key_Return);
 }
 
 RRC::~RRC()

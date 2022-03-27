@@ -27,7 +27,14 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="vout_input"/>
+         <widget class="QLineEdit" name="vout_input">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;输出电压&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="whatsThis">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;输出电压&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -41,7 +48,14 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="vref_input"/>
+         <widget class="QLineEdit" name="vref_input">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;期望的参考电压&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="whatsThis">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;期望的参考电压&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -56,9 +70,6 @@
        <widget class="QPushButton" name="calc_btn">
         <property name="text">
          <string>计算</string>
-        </property>
-        <property name="shortcut">
-         <string>Return, Enter</string>
         </property>
        </widget>
       </item>

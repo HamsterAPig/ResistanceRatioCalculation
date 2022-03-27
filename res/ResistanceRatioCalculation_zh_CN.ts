@@ -18,100 +18,110 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rrc.ui" line="39"/>
-        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="142"/>
+        <location filename="../src/rrc.ui" line="32"/>
+        <location filename="../src/rrc.ui" line="35"/>
+        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="143"/>
+        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="146"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;输出电压&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/rrc.ui" line="46"/>
+        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="148"/>
         <location filename="../cmake-build-release/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="148"/>
         <source>Vref:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rrc.ui" line="58"/>
-        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="143"/>
+        <location filename="../src/rrc.ui" line="53"/>
+        <location filename="../src/rrc.ui" line="56"/>
+        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="150"/>
+        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="153"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;期望的参考电压&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/rrc.ui" line="72"/>
+        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="155"/>
         <location filename="../cmake-build-release/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="150"/>
         <source>计算</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rrc.ui" line="61"/>
-        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="145"/>
-        <source>Return, Enter</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/rrc.ui" line="75"/>
-        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="147"/>
+        <location filename="../src/rrc.ui" line="86"/>
+        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="156"/>
         <location filename="../cmake-build-release/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="151"/>
         <source>E6</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rrc.ui" line="80"/>
-        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="148"/>
+        <location filename="../src/rrc.ui" line="91"/>
+        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="157"/>
         <location filename="../cmake-build-release/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="152"/>
         <source>E12</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rrc.ui" line="85"/>
-        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="149"/>
+        <location filename="../src/rrc.ui" line="96"/>
+        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="158"/>
         <location filename="../cmake-build-release/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="153"/>
         <source>E24</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rrc.ui" line="90"/>
-        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="150"/>
+        <location filename="../src/rrc.ui" line="101"/>
+        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="159"/>
         <location filename="../cmake-build-release/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="154"/>
         <source>E48</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rrc.ui" line="95"/>
-        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="151"/>
+        <location filename="../src/rrc.ui" line="106"/>
+        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="160"/>
         <location filename="../cmake-build-release/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="155"/>
         <source>E96</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rrc.ui" line="100"/>
-        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="152"/>
+        <location filename="../src/rrc.ui" line="111"/>
+        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="161"/>
         <location filename="../cmake-build-release/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="156"/>
         <source>E192</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rrc.ui" line="105"/>
-        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="153"/>
+        <location filename="../src/rrc.ui" line="116"/>
+        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="162"/>
         <location filename="../cmake-build-release/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="157"/>
         <source>All</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rrc.cpp" line="13"/>
-        <location filename="../src/rrc.cpp" line="49"/>
-        <location filename="../src/rrc.cpp" line="131"/>
+        <location filename="../src/rrc.cpp" line="14"/>
+        <location filename="../src/rrc.cpp" line="60"/>
+        <location filename="../src/rrc.cpp" line="142"/>
         <source>空闲</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rrc.cpp" line="36"/>
-        <location filename="../src/rrc.cpp" line="124"/>
+        <location filename="../src/rrc.cpp" line="37"/>
+        <location filename="../src/rrc.cpp" line="135"/>
         <source>比值</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rrc.cpp" line="36"/>
-        <location filename="../src/rrc.cpp" line="124"/>
+        <location filename="../src/rrc.cpp" line="37"/>
+        <location filename="../src/rrc.cpp" line="135"/>
         <source>误差</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rrc.cpp" line="75"/>
+        <location filename="../src/rrc.cpp" line="86"/>
         <source>忙碌</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rrc.cpp" line="133"/>
+        <location filename="../src/rrc.cpp" line="144"/>
         <source>查询用时: %1</source>
         <translation type="unfinished"></translation>
     </message>
