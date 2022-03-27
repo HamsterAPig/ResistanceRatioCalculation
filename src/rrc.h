@@ -30,6 +30,7 @@ private:
 
     QVector < QVector < QVector< float > > > vec_resistances;
     QStandardItemModel* model;
+    QLabel* pragram_status;
 
     /**
      * 读取csv文件里面的数据到QVector中方便后续查找

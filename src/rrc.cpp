@@ -1,19 +1,22 @@
 #include "rrc.h"
 #include "./ui_rrc.h"
 #include <QtMath>
+#include <QElapsedTimer>
 
 RRC::RRC(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::RRC)
 {
     ui->setupUi(this);
+    pragram_status = new QLabel(this);
+    ui->statusbar->addPermanentWidget(pragram_status);
+    pragram_status->setText(tr("空闲"));
 
     // 将svg图片显示出来
     QGraphicsScene *scene = new QGraphicsScene();
     QGraphicsSvgItem *item = new QGraphicsSvgItem(":/dianzu_fenya.svg");
     scene->addItem(item);
     ui->graphicsView->setScene(scene);
-//    ui->graphicsView->fitInView(scene->sceneRect(),Qt::KeepAspectRatio);
     ui->graphicsView->show();
 
     qDebug()<<"ui->graphicsView->size():"<<ui->graphicsView->size();
@@ -43,6 +46,7 @@ RRC::~RRC()
 
 void RRC::read_csv(QString path)
 {
+    pragram_status->setText(tr("空闲"));
     // 定义一个二维的QVector暂时缓存一整份csv文件
     QVector< QVector<float> > tmp_sec_vec;
     QFile file(path);
@@ -68,6 +72,9 @@ void RRC::read_csv(QString path)
 
 void RRC::on_calc_btn_clicked()
 {
+    pragram_status->setText(tr("忙碌"));
+    QElapsedTimer mstimer;
+    mstimer.start();
     float vout = ui->vout_input->text().toFloat();
     float vref = ui->vref_input->text().toFloat();
     int comb_index = ui->comboBox->currentIndex();
@@ -121,4 +128,7 @@ void RRC::on_calc_btn_clicked()
         }
         qDebug()<<"Model data:"<<model->rowCount();
     }
+    pragram_status->setText(tr("空闲"));
+    float time = (double)mstimer.nsecsElapsed()/(double)1000000;
+    ui->statusbar->showMessage(tr("查询用时: %1").arg(time));
 }
