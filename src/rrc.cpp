@@ -19,7 +19,7 @@ RRC::RRC(QWidget *parent)
 
     // 状态栏添加帮助信息
     QLabel* help_label = new QLabel(this);
-    ui->statusbar->addPermanentWidget(help_label,2);
+    ui->statusbar->addPermanentWidget(help_label);
     help_label->setText(tr("按下F1查看帮助"));
 
     // 将svg图片显示出来
@@ -137,7 +137,7 @@ void RRC::on_calc_btn_clicked()
         index_right++;
         index++;
         if (index_left < 0 || index_right > vec_resistances[comb_index].count()) break;
-    }while (qFabs(point_number - vec_resistances[comb_index][index_left][2]) <= 0.01 || qFabs(point_number - vec_resistances[comb_index][index_right][2]) <= 0.01);
+    }while (qFabs(point_number - vec_resistances[comb_index][index_left][2]) <= 0.1 || qFabs(point_number - vec_resistances[comb_index][index_right][2]) <= 0.05);
     std::sort(tmp_found_vec.begin(), tmp_found_vec.end(), [](QVector<float>&a, QVector<float>&b)->bool{return a[3]<b[3];});
     qDebug()<<"tmp_found_vec:"<<tmp_found_vec;
 
