@@ -11,9 +11,16 @@ RRC::RRC(QWidget *parent)
     , ui(new Ui::RRC)
 {
     ui->setupUi(this);
+
+    // 右下角状态栏
     pragram_status = new QLabel(this);
     ui->statusbar->addPermanentWidget(pragram_status);
     pragram_status->setText(tr("空闲"));
+
+    // 状态栏添加帮助信息
+    QLabel* help_label = new QLabel(this);
+    ui->statusbar->addPermanentWidget(help_label,2);
+    help_label->setText(tr("按下F1查看帮助"));
 
     // 将svg图片显示出来
     QGraphicsScene *scene = new QGraphicsScene();
@@ -25,6 +32,7 @@ RRC::RRC(QWidget *parent)
     qDebug()<<"ui->graphicsView->size():"<<ui->graphicsView->size();
     qDebug()<<"scene->sceneRect().size(): " << scene->sceneRect().size();
 
+    // 读取csv文件到内存当中
     read_csv(":/1.csv");
     read_csv(":/2.csv");
     read_csv(":/3.csv");
@@ -51,6 +59,7 @@ RRC::RRC(QWidget *parent)
     ui->calc_btn->setShortcut(Qt::Key_Enter);
     ui->calc_btn->setShortcut(Qt::Key_Return);
 
+    // 绑定快捷键，按下F1打开窗口获取帮助
     QShortcut* press_ps = new QShortcut(Qt::Key_F1, this, SLOT(press_f1_showHelp()));
 }
 

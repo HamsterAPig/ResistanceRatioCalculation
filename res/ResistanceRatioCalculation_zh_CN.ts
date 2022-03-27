@@ -144,31 +144,36 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rrc.cpp" line="16"/>
-        <location filename="../src/rrc.cpp" line="64"/>
-        <location filename="../src/rrc.cpp" line="146"/>
+        <location filename="../src/rrc.cpp" line="18"/>
+        <location filename="../src/rrc.cpp" line="73"/>
+        <location filename="../src/rrc.cpp" line="155"/>
         <source>空闲</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rrc.cpp" line="39"/>
-        <location filename="../src/rrc.cpp" line="139"/>
+        <location filename="../src/rrc.cpp" line="23"/>
+        <source>按下F1查看帮助</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/rrc.cpp" line="47"/>
+        <location filename="../src/rrc.cpp" line="148"/>
         <source>比值</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rrc.cpp" line="39"/>
-        <location filename="../src/rrc.cpp" line="139"/>
+        <location filename="../src/rrc.cpp" line="47"/>
+        <location filename="../src/rrc.cpp" line="148"/>
         <source>误差</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rrc.cpp" line="90"/>
+        <location filename="../src/rrc.cpp" line="99"/>
         <source>忙碌</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rrc.cpp" line="148"/>
+        <location filename="../src/rrc.cpp" line="157"/>
         <source>查询用时: %1</source>
         <translation type="unfinished"></translation>
     </message>
