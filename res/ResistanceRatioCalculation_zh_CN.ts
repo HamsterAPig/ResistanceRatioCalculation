@@ -5,68 +5,80 @@
     <name>RRC</name>
     <message>
         <location filename="../src/rrc.ui" line="14"/>
-        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="145"/>
+        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="146"/>
         <source>电阻阻值计算</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/rrc.ui" line="25"/>
-        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="146"/>
+        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="147"/>
         <source>Vout:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/rrc.ui" line="39"/>
-        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="147"/>
+        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="148"/>
         <source>Vref:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/rrc.ui" line="65"/>
-        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="149"/>
+        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="150"/>
         <source>计算</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/rrc.ui" line="79"/>
-        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="150"/>
+        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="151"/>
         <source>E6</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/rrc.ui" line="84"/>
-        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="151"/>
+        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="152"/>
         <source>E12</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/rrc.ui" line="89"/>
-        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="152"/>
+        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="153"/>
         <source>E24</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/rrc.ui" line="94"/>
-        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="153"/>
+        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="154"/>
         <source>E48</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/rrc.ui" line="99"/>
-        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="154"/>
+        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="155"/>
         <source>E96</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/rrc.ui" line="104"/>
-        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="155"/>
+        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="156"/>
         <source>E192</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/rrc.ui" line="109"/>
-        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="156"/>
+        <location filename="../cmake-build-debug/ResistanceRatioCalculation_autogen/include/ui_rrc.h" line="157"/>
         <source>All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/rrc.cpp" line="33"/>
+        <location filename="../src/rrc.cpp" line="115"/>
+        <source>比值</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/rrc.cpp" line="33"/>
+        <location filename="../src/rrc.cpp" line="115"/>
+        <source>误差</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

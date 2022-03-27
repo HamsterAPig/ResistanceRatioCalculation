@@ -27,6 +27,13 @@ RRC::RRC(QWidget *parent)
     read_csv(":/6.csv");
     read_csv(":/7.csv");
     qDebug()<<vec_resistances.count();
+
+    // 表格显示
+    model = new QStandardItemModel();
+    model->setHorizontalHeaderLabels({"R1","R2",tr("比值"),tr("误差")});
+    ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->tableView->setModel(model);
+    ui->tableView->show();
 }
 
 RRC::~RRC()
@@ -102,4 +109,16 @@ void RRC::on_calc_btn_clicked()
     }
     std::sort(tmp_found_vec.begin(), tmp_found_vec.end(), [](QVector<float>&a, QVector<float>&b)->bool{return a[3]<b[3];});
     qDebug()<<"tmp_found_vec:"<<tmp_found_vec;
+
+    //表格显示
+    model->clear();
+    // 原本打算使用removerows的，结果这货没法清除好像
+    // 所以就使用clear之后重建一下表头
+    model->setHorizontalHeaderLabels({"R1","R2",tr("比值"),tr("误差")});
+    for (int i = 0; i < tmp_found_vec.count(); i++){
+        for(int j = 0; j < 4; j++){
+            model->setItem(i,j,new QStandardItem(QString("%1").arg(tmp_found_vec[i][j])));
+        }
+        qDebug()<<"Model data:"<<model->rowCount();
+    }
 }

@@ -29,6 +29,7 @@ private:
     Ui::RRC *ui;
 
     QVector < QVector < QVector< float > > > vec_resistances;
+    QStandardItemModel* model;
 
     /**
      * 读取csv文件里面的数据到QVector中方便后续查找

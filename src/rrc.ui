@@ -114,7 +114,7 @@
      </layout>
     </item>
     <item>
-     <widget class="QTextBrowser" name="textBrowser"/>
+     <widget class="QTableView" name="tableView"/>
     </item>
    </layout>
   </widget>
