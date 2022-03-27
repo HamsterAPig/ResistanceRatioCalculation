@@ -51,18 +51,14 @@
      <widget class="QGraphicsView" name="graphicsView"/>
     </item>
     <item>
-     <widget class="QLabel" name="label_3">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item>
      <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
        <widget class="QPushButton" name="calc_btn">
         <property name="text">
          <string>计算</string>
+        </property>
+        <property name="shortcut">
+         <string>Return, Enter</string>
         </property>
        </widget>
       </item>
