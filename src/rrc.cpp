@@ -107,7 +107,7 @@ void RRC::on_calc_btn_clicked()
 
     // 三分查找最接近的值
     int left = 1;
-    int right = vec_resistances[comb_index].count();
+    int right = vec_resistances[comb_index].count() - 1;
     while(left < right){
         int midl = left + (right - left)/3;
         int midr = right - (right - left)/3;
@@ -115,16 +115,18 @@ void RRC::on_calc_btn_clicked()
         float err_l = point_number - vec_resistances[comb_index][midl][2];
         float err_r = point_number - vec_resistances[comb_index][midr][2];
         if(qFabs(err_l) > qFabs(err_r)){
+            qDebug()<<"Left"<<left<<right<<vec_resistances[comb_index][midl][2]<<vec_resistances[comb_index][midr][2]<<midl<<midr;
             left  = midl + 1;
         } else {
+            qDebug()<<"Right"<<left<<right<<vec_resistances[comb_index][midl][2]<<vec_resistances[comb_index][midr][2]<<midl<<midr;
             right = midr - 1;
         }
-        qDebug()<<"loop for left :"<<left;
     }
 
     // 定义一个二维的QVector暂时缓存一下找到的元素
     QVector< QVector<float> > tmp_found_vec;
-    int index_left = left ,index_right = left + 1, index = 0;
+    int index_left = left , index = 0;
+    int index_right = left == vec_resistances[comb_index].count() - 1 ? left : left + 1;
     do{
         qDebug()<<"Found left is:"<<vec_resistances[comb_index][index_left];
         tmp_found_vec.append(vec_resistances[comb_index][index_left]);
