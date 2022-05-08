@@ -146,7 +146,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/rrc.cpp" line="18"/>
         <location filename="../src/rrc.cpp" line="73"/>
-        <location filename="../src/rrc.cpp" line="157"/>
+        <location filename="../src/rrc.cpp" line="159"/>
         <source>空闲</source>
         <translation type="unfinished"></translation>
     </message>
@@ -157,14 +157,20 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../src/rrc.cpp" line="47"/>
-        <location filename="../src/rrc.cpp" line="150"/>
+        <location filename="../src/rrc.cpp" line="152"/>
         <source>比值</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/rrc.cpp" line="47"/>
-        <location filename="../src/rrc.cpp" line="150"/>
+        <location filename="../src/rrc.cpp" line="152"/>
         <source>误差</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/rrc.cpp" line="47"/>
+        <location filename="../src/rrc.cpp" line="152"/>
+        <source>输出电压</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -173,7 +179,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rrc.cpp" line="159"/>
+        <location filename="../src/rrc.cpp" line="161"/>
         <source>查询用时: %1</source>
         <translation type="unfinished"></translation>
     </message>

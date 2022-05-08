@@ -44,7 +44,7 @@ RRC::RRC(QWidget *parent)
 
     // 表格显示
     model = new QStandardItemModel();
-    model->setHorizontalHeaderLabels({"R1","R2",tr("比值"),tr("误差")});
+    model->setHorizontalHeaderLabels({"R1","R2",tr("比值"),tr("误差"),tr("输出电压")});
     ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     ui->tableView->setModel(model);
     ui->tableView->show();
@@ -131,9 +131,11 @@ void RRC::on_calc_btn_clicked()
         qDebug()<<"Found left is:"<<vec_resistances[comb_index][index_left];
         tmp_found_vec.append(vec_resistances[comb_index][index_left]);
         tmp_found_vec[index].append(qFabs(point_number - vec_resistances[comb_index][index_left][2]));
+        tmp_found_vec[index].append(vref/vec_resistances[comb_index][index_left][2]);
 
         tmp_found_vec.append(vec_resistances[comb_index][index_right]);
         tmp_found_vec[++index].append(qFabs(point_number - vec_resistances[comb_index][index_right][2]));
+        tmp_found_vec[index].append(vref/vec_resistances[comb_index][index_right][2]);
 
         index_left--;
         index_right++;
@@ -147,9 +149,9 @@ void RRC::on_calc_btn_clicked()
     model->clear();
     // 原本打算使用removerows的，结果这货没法清除好像
     // 所以就使用clear之后重建一下表头
-    model->setHorizontalHeaderLabels({"R1","R2",tr("比值"),tr("误差")});
+    model->setHorizontalHeaderLabels({"R1","R2",tr("比值"),tr("误差"),tr("输出电压")});
     for (int i = 0; i < tmp_found_vec.count(); i++){
-        for(int j = 0; j < 4; j++){
+        for(int j = 0; j < 5; j++){
             model->setItem(i,j,new QStandardItem(QString("%1").arg(tmp_found_vec[i][j])));
         }
         qDebug()<<"Model data:"<<model->rowCount();
